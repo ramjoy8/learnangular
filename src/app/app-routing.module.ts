@@ -5,10 +5,11 @@ import {EventDetails} from './event-details'
 import { CreateEvent } from './create-event';
 import {Error} from './error-page'
 import { RouteActivator } from './routeactivator';
+import { EventListResolver } from './event-list.resolver';
 
 const routes: Routes = [
  
- {path :'',component: EventList ,pathMatch:'full'  },
+ {path :'',component: EventList ,pathMatch:'full' ,resolve :{events:EventListResolver} },
  {path:'events/:id',component :EventDetails,canActivate:[RouteActivator]},
  {path:'events/new',component:CreateEvent},
  {path:'error',component:Error},

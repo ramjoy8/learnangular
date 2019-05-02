@@ -1,5 +1,6 @@
 import {Component} from '@angular/core'
 import {EventDataService} from './eventdata.service'
+import {ActivatedRoute} from '@angular/router'
 @Component({
 
 selector : 'event-list',
@@ -19,11 +20,11 @@ export class EventList{
 
   events:any
 
-  constructor(private eventdata:EventDataService) {
+  constructor(private eventdata:EventDataService,private route:ActivatedRoute) {
 
 
   }
 ngOnInit(){
-return this.eventdata.getEventData().subscribe(events=>this.events=events)
+this.events=this.route.snapshot.data['events']
 }
 }

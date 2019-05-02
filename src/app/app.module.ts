@@ -13,6 +13,7 @@ import {CreateEvent} from './create-event'
 import {Error} from './error-page'
 import {RouteActivator} from './routeactivator'
 import { HttpClientModule } from '@angular/common/http'
+import {EventListResolver} from './event-list.resolver'
 @NgModule({
   declarations: [
     Main,
@@ -22,6 +23,7 @@ import { HttpClientModule } from '@angular/common/http'
     eventThumbnail,
     EventDetails,
     CreateEvent,
+    
     Error
   ],
   imports: [
@@ -29,7 +31,7 @@ import { HttpClientModule } from '@angular/common/http'
     AppRoutingModule,
     HttpClientModule
   ],
-  providers: [EventDataService,RouteActivator],
+  providers: [EventDataService,RouteActivator,EventListResolver],
   bootstrap: [Main]
 })
 export class AppModule { }
