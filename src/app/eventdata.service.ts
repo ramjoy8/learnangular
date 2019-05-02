@@ -14,7 +14,7 @@ return this.http.get('https://ggwplearningnode.herokuapp.com/api/events').pipe()
 }
 getEventById(id){
 
-return EVENTS.find(event=>event.id===id)
+  return this.http.get('https://ggwplearningnode.herokuapp.com/api/events/'+id).pipe()
 
 }
 
