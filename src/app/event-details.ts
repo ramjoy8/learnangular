@@ -13,10 +13,14 @@ templateUrl : 'event-details.html'
 
 export class EventDetails{
 
-
+event
 constructor(private eventdata: EventDataService,private router:ActivatedRoute){
 
 }
+ngOnInit(){
+this.eventdata.getEventById(+this.router.snapshot.params['id']).subscribe(event=>{
 
-event=this.eventdata.getEventById(+this.router.snapshot.params['id']).subscribe()
+    this.event = event ;
+})
+}
 }
