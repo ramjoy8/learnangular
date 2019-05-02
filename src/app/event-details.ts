@@ -18,5 +18,5 @@ constructor(private eventdata: EventDataService,private router:ActivatedRoute){
 
 }
 
-event=this.eventdata.getEventById(+this.router.snapshot.params['id'])
+event=this.eventdata.getEventById(+this.router.snapshot.params['id']).subscribe()
 }
