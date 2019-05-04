@@ -25,7 +25,7 @@ export class CreateEvent{
 
 
     }
-    Cancel()
+    cancel()
     {
          this.route.navigate([''])
     }
