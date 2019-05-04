@@ -14,6 +14,7 @@ import {Error} from './error-page'
 import {RouteActivator} from './routeactivator'
 import { HttpClientModule } from '@angular/common/http'
 import {EventListResolver} from './event-list.resolver'
+import {FormsModule} from '@angular/forms'
 @NgModule({
   declarations: [
     Main,
@@ -29,7 +30,8 @@ import {EventListResolver} from './event-list.resolver'
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [EventDataService,RouteActivator,EventListResolver],
   bootstrap: [Main]

@@ -1,5 +1,5 @@
 import {Injectable} from '@angular/core'
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 
 @Injectable()
@@ -17,7 +17,11 @@ getEventById(id){
   return this.http.get('https://ggwplearningnode.herokuapp.com/api/events/'+id).pipe()
  
 }
+saveEvent(formvalues){
+  let options={headers:new HttpHeaders({'Content-Type':'application/jason'})};
+  return this.http.post('/api/event/saveevent',formvalues,options).pipe()
 
+}
 }
 
 const EVENTS = [
