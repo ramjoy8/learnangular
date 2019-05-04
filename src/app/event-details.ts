@@ -17,10 +17,14 @@ event
 constructor(private eventdata: EventDataService,private router:ActivatedRoute){
 
 }
+
 ngOnInit(){
 this.eventdata.getEventById(+this.router.snapshot.params['id']).subscribe(event=>{
 
-    this.event = event ;
+    this.event = event ;   
+    console.log(this.event)
+
+
 })
 }
 }
