@@ -11,14 +11,14 @@ templateUrl:'./create-event.html'
 
 export class CreateEvent{
 
-     
+event     
     constructor(private route:Router,private eventdata:EventDataService){
 
     }
 
     saveEvent(formvalues)
     {
-       this.eventdata.saveEvent(formvalues).subscribe(()=>{
+       this.eventdata.saveEvent(this.event).subscribe(()=>{
 
          this.route.navigate([''])
        })
