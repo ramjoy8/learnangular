@@ -10,8 +10,9 @@ import { EventListResolver } from './event-list.resolver';
 const routes: Routes = [
  
  {path :'',component: EventList ,pathMatch:'full' ,resolve :{events:EventListResolver} },
- {path:'events/:id',component :EventDetails,canActivate:[RouteActivator]},
  {path:'events/new',component:CreateEvent},
+ {path:'events/:id',component :EventDetails,canActivate:[RouteActivator]},
+ 
  {path:'error',component:Error},
  {path:'user',loadChildren:'./user/user.module#UserModule'}
 ];

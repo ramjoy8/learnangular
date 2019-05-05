@@ -11,23 +11,23 @@ templateUrl:'./create-event.html'
 
 export class CreateEvent{
 
-
+     
     constructor(private route:Router,private eventdata:EventDataService){
 
     }
 
     saveEvent(formvalues)
     {
-      this.eventdata.saveEvent(formvalues).subscribe(()=>{
+       this.eventdata.saveEvent(formvalues).subscribe(()=>{
 
-        this.route.navigate([''])
-      })
-
+         this.route.navigate([''])
+       })
+    this.route.navigate([''])
 
     }
     cancel()
     {
          this.route.navigate([''])
-    }
+     }
 
 }

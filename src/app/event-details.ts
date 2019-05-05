@@ -22,7 +22,7 @@ ngOnInit(){
 this.eventdata.getEventById(+this.router.snapshot.params['id']).subscribe(event=>{
 
     this.event = event ;   
-    console.log(this.event)
+    
 
 
 })

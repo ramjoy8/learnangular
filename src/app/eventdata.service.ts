@@ -13,7 +13,7 @@ return this.http.get('https://ggwplearningnode.herokuapp.com/api/events').pipe()
 
 }
 getEventById(id){
-  console.log('https://ggwplearningnode.herokuapp.com/api/events/'+id)
+  
   return this.http.get('https://ggwplearningnode.herokuapp.com/api/events/'+id).pipe()
  
 }
