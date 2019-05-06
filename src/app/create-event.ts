@@ -18,7 +18,7 @@ event
 
     saveEvent(formvalues)
     {
-       this.eventdata.saveEvent(this.event).subscribe(()=>{
+       this.eventdata.saveEvent(formvalues).subscribe(()=>{
 
          this.route.navigate([''])
        })

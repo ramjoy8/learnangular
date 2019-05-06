@@ -19,7 +19,7 @@ constructor(private eventdata: EventDataService,private router:ActivatedRoute){
 }
 
 ngOnInit(){
-this.eventdata.getEventById(+this.router.snapshot.params['id']).subscribe(event=>{
+this.eventdata.getEventById(+this.router.snapshot.params['_id']).subscribe(event=>{
 
     this.event = event ;   
     
