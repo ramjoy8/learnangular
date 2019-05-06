@@ -12,9 +12,9 @@ return this.http.get('https://ggwplearningnode.herokuapp.com/api/events').pipe()
 
 
 }
-getEventById(id){
+getEventById(_id){
   
-  return this.http.get('https://ggwplearningnode.herokuapp.com/api/events/'+id).pipe()
+  return this.http.get('https://ggwplearningnode.herokuapp.com/api/events/'+_id).pipe()
  
 }
 saveEvent(formvalues){
