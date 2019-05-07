@@ -18,7 +18,7 @@ getEventById(_id){
  
 }
 saveEvent(formvalues){
-  let options={headers:new HttpHeaders({'Content-Type':'application/jason'})};
+  let options={headers:new HttpHeaders({'Content-Type':'application/json'})};
   return this.http.post('https://ggwplearningnode.herokuapp.com/api/event/saveevent',formvalues,options).pipe()
 
 }
