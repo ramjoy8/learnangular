@@ -13,9 +13,12 @@ return this.http.get('https://ggwplearningnode.herokuapp.com/api/events').pipe()
 
 }
 getEventById(_id){
-  
-  return this.http.get('https://ggwplearningnode.herokuapp.com/api/events/'+_id).pipe()
+
+  // console.log('https://ggwplearningnode.herokuapp.com/api/events/'+_id)
+  // console.log(this.http.get('http://localhost:5000/api/events/'+_id).pipe())
  
+  return this.http.get('https://ggwplearningnode.herokuapp.com/api/events/'+_id).pipe()
+
 }
 saveEvent(formvalues){
   let options={headers:new HttpHeaders({'Content-Type':'application/json'})};
