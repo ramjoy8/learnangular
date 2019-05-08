@@ -21,9 +21,8 @@ constructor(private eventdata: EventDataService,private router:ActivatedRoute){
 
 ngOnInit(){
 
-    console.log(this.router.snapshot.params['_id'])
-    console.log(this.event)
-    this.eventdata.getEventById(this.router.snapshot.params['_id']).subscribe(events=>this.event=events)
+    
+    this.event=this.router.snapshot.data['eventdetails']
     console.log(this.event)
 }
 

@@ -11,7 +11,7 @@ constructor(private eventdata:EventDataService,private route:Router ){
 
 canActivate(router:ActivatedRouteSnapshot){
 
-    const eventExits = !!this.eventdata.getEventById(+router.params['id'])
+    const eventExits = !!this.eventdata.getEventById(router.params['_id'])
 
     
     if(!eventExits)

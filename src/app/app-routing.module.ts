@@ -6,12 +6,13 @@ import { CreateEvent } from './create-event';
 import {Error} from './error-page'
 import { RouteActivator } from './routeactivator';
 import { EventListResolver } from './event-list.resolver';
+import { EventDetailResolver } from './event-details.resolver';
 
 const routes: Routes = [
  
  {path :'',component: EventList ,pathMatch:'full' ,resolve :{events:EventListResolver} },
  {path:'events/new',component:CreateEvent},
- {path:'event/:_id',component :EventDetails,canActivate:[RouteActivator]},
+ {path:'event/:_id',component :EventDetails,resolve :{eventdetails:EventDetailResolver}},
  
  {path:'error',component:Error},
  {path:'user',loadChildren:'./user/user.module#UserModule'}

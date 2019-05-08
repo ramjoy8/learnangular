@@ -15,6 +15,7 @@ import {RouteActivator} from './routeactivator'
 import { HttpClientModule } from '@angular/common/http'
 import {EventListResolver} from './event-list.resolver'
 import {FormsModule} from '@angular/forms'
+import {EventDetailResolver} from './event-details.resolver'
 @NgModule({
   declarations: [
     Main,
@@ -33,7 +34,7 @@ import {FormsModule} from '@angular/forms'
     HttpClientModule,
     FormsModule
   ],
-  providers: [EventDataService,RouteActivator,EventListResolver],
+  providers: [EventDataService,RouteActivator,EventListResolver,EventDetailResolver,],
   bootstrap: [Main]
 })
 export class AppModule { }
