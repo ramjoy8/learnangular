@@ -23,7 +23,7 @@ event
 
          this.route.navigate([''])
        })
-    this.route.navigate([''])
+    
 
     }
     cancel()
